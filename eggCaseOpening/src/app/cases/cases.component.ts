@@ -14,6 +14,12 @@ export class CasesComponent implements OnInit {
 
   caseLegendary = []
 
+  collection: any = []
+
+  count = 0
+
+  count1 = 0
+
   egg: any = undefined
 
   constructor(private apiService: APIService) { }
@@ -22,7 +28,16 @@ export class CasesComponent implements OnInit {
   }
 
   getRandEgg(){
-    this.apiService.getRandomEgg().subscribe(dataRE => this.egg = dataRE);
+    this.apiService.getRandomEgg().subscribe(dataRE => {
+      this.egg = dataRE
+      this.collection.push(this.egg)
+      this.count = this.collection.length
+      console.log(this.collection)
+    });  
+  }
+
+  addCredits(){
+    this.count1 += 5
   }
 
 }

@@ -19,7 +19,7 @@ export class CaractersComponent implements OnInit {
 
   getRandCar(){
     this.apiService.getRandomCaracter().subscribe(dataRC => {
-      this.caracters = [ dataRC]}
+      this.caracters = [dataRC]}
       );
   }
 
