@@ -5,5 +5,9 @@ import { Injectable } from '@angular/core';
 })
 export class GameService {
 
+  inventory = [];
+  numberCredit = 0;
+  
+
   constructor() { }
 }

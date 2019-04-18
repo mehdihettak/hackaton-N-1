@@ -1,3 +1,23 @@
-<p>
-  cases works!
-</p>
+<h2>Loot some special eggs and up your character !</h2>
+<div class="row" id='case'>
+  <div class="col-sm-4">
+    <div class="card">
+      <img class="card-img-top" src="https://lootg2acom.blob.core.windows.net/assets/custom/48.png"
+        alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Basic Case</h5>
+        <p class="card-text">Egg rarity : junk, basic, fine</p>
+        <button (click)="getRandEgg()" class="btn btn-primary">Loot</button>
+        <div *ngIf="egg">
+          <img [src]="egg.image">
+          <p>{{ egg.name }}</p>
+          <p>{{ egg.rarity }}</p>
+          <p>{{ egg.power }}</p>
+        </div>
+      </div>
+      <div class="card-footer">
+        <small>Price : 1$ </small>
+      </div>
+    </div>
+  </div>
+</div>

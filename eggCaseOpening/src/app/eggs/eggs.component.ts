@@ -10,15 +10,16 @@ import { APIService } from '../api.service';
 export class EggsComponent implements OnInit {
   
   public eggs : any = []
+  public collection: any = []
 
   constructor(private apiService: APIService) { }
 
   ngOnInit() {
-    this.apiService.getEgg().subscribe(data => this.eggs = data);
   }
 
   getRandEgg(){
-    this.apiService.getRandomEgg().subscribe(dataRE => this.eggs = dataRE);
+    this.apiService.getRandomEgg().subscribe(dataRE => this.eggs = dataRE => this.collection.push(this.eggs));
+    console.log(this.collection)
   }
 
 }

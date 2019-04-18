@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { APIService } from '../api.service';
 
 @Component({
   selector: 'app-cases',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CasesComponent implements OnInit {
 
-  constructor() { }
+  caseBasic = []
+
+  casePremium = []
+
+  caseLegendary = []
+
+  egg: any = undefined
+
+  constructor(private apiService: APIService) { }
 
   ngOnInit() {
+  }
+
+  getRandEgg(){
+    this.apiService.getRandomEgg().subscribe(dataRE => this.egg = dataRE);
   }
 
 }

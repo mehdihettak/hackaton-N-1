@@ -1,17 +1,13 @@
-<h2>Pick a random characters</h2>
 <div>
-  <button class="btn btn-success" (click)="getRandCar()" type="button">Cliquer ici</button>
-</div>
-<div>
-  <h2>Here are all the characters that you can choose</h2>
-  <div class="row">
-    <div *ngFor="let caracter of caracters" class="card col-2" style="width: 18rem;">
-      <img class="card-img-top" [src]="caracter.image" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">{{ caracter.name }}</h5>
-        <p class="card-text">{{ caracter.skills }}</p>
+    <h2>Here are all the characters that you can choose</h2>
+    <div class="row">
+      <div *ngFor="let caracter of caracters" class="card col-2" style="width: 18rem;">
+        <img class="card-img-top" [src]="caracter.image" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{ caracter.name }}</h5>
+          <p class="card-text">{{ caracter.skills }}</p>
+          <a href="#" class="btn btn-primary">Choose me</a>
+        </div>
       </div>
     </div>
   </div>
-</div>
-
