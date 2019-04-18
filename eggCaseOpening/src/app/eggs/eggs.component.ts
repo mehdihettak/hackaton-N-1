@@ -9,7 +9,7 @@ import { APIService } from '../api.service';
 })
 export class EggsComponent implements OnInit {
   
-  public eggs : any;
+  public eggs : any = []
 
   constructor(private apiService: APIService) { }
 

@@ -3,27 +3,27 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 class egg {
-  id: string
-  name: string
-  color: string
-  caliber: string
-  farming: number
-  country: string
-  validity: string
-  rarity: string
-  image: string
-  power: string
+  id: string;
+  name: string;
+  color: string;
+  caliber: string;
+  farming: number;
+  country: string;
+  validity: string;
+  rarity: string;
+  image: string;
+  power: string;
 }
 
 class caracters {
-  id: string
-  name: string
-  gender: string
-  origin: string
-  image: string
+  id: string;
+  name: string;
+  gender: string;
+  origin: string;
+  image: string;
   skills: [
     string
-  ]
+  ];
 } 
 
 @Injectable({

@@ -8,7 +8,8 @@ import { APIService } from '../api.service';
 })
 export class CaractersComponent implements OnInit {
 
-  public caracters : any;
+  public caracters : any = []
+  public character : any = {}
 
   constructor(private apiService: APIService) { }
 
@@ -17,7 +18,9 @@ export class CaractersComponent implements OnInit {
   }
 
   getRandCar(){
-    this.apiService.getRandomCaracter().subscribe(dataRC => this.caracters = dataRC);
+    this.apiService.getRandomCaracter().subscribe(dataRC => {
+      this.caracters = [ dataRC]}
+      );
   }
 
 }
