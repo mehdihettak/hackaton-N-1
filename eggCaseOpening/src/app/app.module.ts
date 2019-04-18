@@ -7,13 +7,15 @@ import { CasesComponent } from './cases/cases.component';
 import { CaractersComponent } from './caracters/caracters.component';
 import {HttpClientModule} from  '@angular/common/http';
 import { APIService } from './api.service';
+import { EggsComponent } from './eggs/eggs.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CasesComponent,
-    CaractersComponent
+    CaractersComponent,
+    EggsComponent
   ],
   imports: [
     BrowserModule,

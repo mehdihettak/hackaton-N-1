@@ -16,4 +16,8 @@ export class CaractersComponent implements OnInit {
     this.apiService.getCaracter().subscribe(data => this.caracters = data);
   }
 
+  getRandCar(){
+    this.apiService.getRandomCaracter().subscribe(dataRC => this.caracters = dataRC);
+  }
+
 }

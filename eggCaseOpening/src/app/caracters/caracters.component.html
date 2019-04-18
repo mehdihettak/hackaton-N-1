@@ -1,9 +1,16 @@
+<div>
+  <h2>Here are all the characters that you can choose</h2>
   <div class="row">
-    <div *ngFor="let item of caracters" class="card col-2" style="width: 18rem;">
-      <img class="card-img-top" [src]="item.image" alt="Card image cap">
+    <div *ngFor="let caracter of caracters" class="card col-2" style="width: 18rem;">
+      <img class="card-img-top" [src]="caracter.image" alt="Card image cap">
       <div class="card-body">
-        <h5 class="card-title">{{ item.name }}</h5>
-        <p class="card-text">{{ item.skills }}</p>
+        <h5 class="card-title">{{ caracter.name }}</h5>
+        <p class="card-text">{{ caracter.skills }}</p>
       </div>
     </div>
   </div>
+</div>
+
+  <h2>Pick a random characters</h2>
+  <button class="btn btn-success"
+  (click)="getRandCar()" type="button">Cliquer ici</button>

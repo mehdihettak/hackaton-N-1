@@ -41,4 +41,12 @@ export class APIService {
     return this.http.get<caracters>(`http://easteregg.wildcodeschool.fr/api/characters`);
   }
 
+  getRandomEgg() : Observable<egg>{
+    return this.http.get<egg>(`http://easteregg.wildcodeschool.fr/api/eggs/random`);
+  }
+
+  getRandomCaracter() : Observable<caracters> {
+    return this.http.get<caracters>(`http://easteregg.wildcodeschool.fr/api/characters/random`);
+  }
+
 }
