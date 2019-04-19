@@ -1,6 +1,6 @@
 <div class="row" id='case'>
   <div class="col-6">
-    <div class="card">
+    <div class="card" style="width: 30rem;">
       <h2>Loot some special eggs and complete your collection !</h2>
       <img class="card-img-top" src="https://lootg2acom.blob.core.windows.net/assets/custom/48.png"
         alt="Card image cap">
@@ -18,39 +18,55 @@
     </div>
   </div>
   <div class="col-6">
-      <div class="card">
-        <h2>Loot some special eggs and complete your collection !</h2>
-        <img class="card-img-top" src="https://lootg2acom.blob.core.windows.net/assets/custom/48.png"
-          alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Basic Case</h5>
-          <p class="card-text">Egg rarity : junk, basic, fine</p>
-          <button (click)="getRandEgg()" class="btn btn-primary">Loot</button>
-          <div *ngIf="egg">
-            <img [src]="egg.image">
-            <p>{{ egg.name }}</p>
-            <p>{{ egg.rarity }}</p>
-            <p>{{ egg.power }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-</div>
-
-<div class="card">
-  <h2>Check your collection of Eggs</h2>
-  <h5>You have {{ count }} credits</h5>
-  <div class="row">
-    <div *ngFor="let eggEarn of collection" class="card col-2" style="width: 18rem;">
-      <img class="card-img-top" [src]="eggEarn.image" alt="Card image cap">
+    <div class="card" style="width: 30rem;">
+      <h2>Loot some special characters and complete your collection !</h2>
+      <img class="card-img-top" src="https://lootg2acom.blob.core.windows.net/assets/custom/48.png"
+        alt="Card image cap">
       <div class="card-body">
-        <h5 class="card-title">{{ eggEarn.name }}</h5>
-        <p class="card-text">{{ eggEarn.skills }}</p>
+        <h5 class="card-title">Basic Case</h5>
+        <p class="card-text">Egg rarity : junk, basic, fine</p>
+        <button (click)="getRandCar()" class="btn btn-primary">Loot</button>
+        <div *ngIf="character">
+          <img [src]="character.image">
+          <p>{{ character.name }}</p>
+          <p>{{ character.skills }}</p>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
+<h2>Check your collection of Eggs</h2>
+<h5>You have {{ count }} credits</h5>
+<div class="row">
+  <div class="card">
+    <div class="row">
+      <div *ngFor="let eggEarn of collection" class="card col-2" style="width: 18rem;">
+        <img class="card-img-top" [src]="eggEarn.image" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{ eggEarn.name }}</h5>
+          <p class="card-text">{{ eggEarn.power }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>Check your collection of Characters</h2>
+<h5>You have {{ count }} credits</h5>
+<div class="row">
+  <div class="card">
+    <div class="row">
+      <div *ngFor="let charaEarn of characterCollection" class="card col-2" style="width: 18rem;">
+        <img class="card-img-top" [src]="charaEarn.image" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{ charaEarn.name }}</h5>
+          <p class="card-text">{{ charaEarn.skills }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="row">
   <div class="card col-4">

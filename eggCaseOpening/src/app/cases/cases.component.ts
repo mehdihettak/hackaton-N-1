@@ -28,6 +28,10 @@ export class CasesComponent implements OnInit {
 
   milkStock : any = undefined
 
+  characterCollection: any = []
+
+  character: any = undefined
+
 
   constructor(private apiService: APIService) { }
 
@@ -65,6 +69,13 @@ export class CasesComponent implements OnInit {
       );
   }
 
-
+  getRandCar(){
+    this.apiService.getRandomCaracter().subscribe(dataRE => {
+      this.character = dataRE
+      this.characterCollection.push(this.character)
+      this.count = this.characterCollection.length
+      console.log(this.characterCollection)
+    });  
+  }
 
 }
