@@ -1,7 +1,8 @@
 <!-- NAVBAR-->
 <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#">ECO</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
@@ -12,7 +13,7 @@
           <i class="fa fa-home"></i>
           Case Opening
           <span class="sr-only">(current)</span>
-          </a>
+        </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">
@@ -31,20 +32,21 @@
         </a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
           <i class="fa fa-envelope-o">
             <span class="badge badge-success">{{ count }}</span>
           </i>
           Credits
         </a>
-        
+
       </li>
     </ul>
     <ul class="navbar-nav ">
-     
+
       <li class="nav-item">
         <a class="nav-link" href="#">
-          
+
           Store
         </a>
       </li>
@@ -56,97 +58,92 @@
   </div>
 </nav>
 
-<h1>You have <span class="badge badge-primary">{{ count }} </span>credits</h1>
+<div class="background">
+  <h1>You have <span class="badge badge-primary">{{ count }} </span>credits</h1>
 
-<div class="row" id='case'>
-  <div class="col-6 cases">
-    <div class="card caseH" style="width: 40rem;">
-      <h2>Loot some special eggs and complete your collection !</h2>
-      <img class="card-img-top zoom" src="https://lootg2acom.blob.core.windows.net/assets/custom/48.png"
-        alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Egg Case</h5>
-        <p class="card-text">Egg rarity : junk, basic, fine</p>
-        <button (click)="getRandEgg()" class="btn btn-primary btn-lg">Loot a mystery Egg</button>
-        <div *ngIf="egg">
-          <img [src]="egg.image" style="height: 465px;">
-          <p>{{ egg.name }}</p>
-          <p>{{ egg.rarity }}</p>
-          <p>{{ egg.power }}</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-6 cases">
-    <div class="card caseH" style="width: 40rem;">
-      <h2>Loot some special characters and complete your collection !</h2>
-      <img class="card-img-top zoom" src="https://lootg2acom.blob.core.windows.net/assets/custom/2.png"
-        alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Character Case</h5>
-        <p class="card-text">Egg rarity : junk, basic, fine</p>
-        <button (click)="getRandCar()" class="btn btn-primary btn-lg">Loot a mystery Character</button>
-        <div *ngIf="character">
-          <img [src]="character.image" style="height: 465px;">
-          <p>{{ character.name }}</p>
-          <p>{{ character.skills }}</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<h2>Check your collection of Eggs</h2>
-<div class="row">
-  <div class="card">
-    <div class="row">
-      <div *ngFor="let eggEarn of collection" class="card" style="width: 18rem;">
-        <img class="card-img-top" [src]="eggEarn.image" alt="Card image cap">
+  <div class="row" id='case'>
+    <div class="col-6 cases">
+      <div class="card caseH black" style="width: 40rem;">
+        <h2>Loot some special eggs and complete your collection !</h2>
+        <img class="card-img-top zoom" src="https://lootg2acom.blob.core.windows.net/assets/custom/48.png"
+          alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">{{ eggEarn.name }}</h5>
-          <p class="card-text">{{ eggEarn.power }}</p>
+          <h5 class="card-title">Egg Case</h5>
+          <button (click)="getRandEgg()" class="btn btn-primary btn-lg">Loot a mystery Egg</button>
+          <div *ngIf="egg">
+            <img [src]="egg.image" style="height: 465px;">
+            <h1>{{ egg.name }}</h1>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-
-<h2>Check your collection of Characters</h2>
-<div class="row">
-  <div class="card">
-    <div class="row">
-      <div *ngFor="let charaEarn of characterCollection" class="card" style="width: 18rem;">
-        <img class="card-img-top" [src]="charaEarn.image" alt="Card image cap">
+    <div class="col-6 cases">
+      <div class="card caseH black" style="width: 40rem;">
+        <h2>Loot some special characters and complete your collection !</h2>
+        <img class="card-img-top zoom" src="https://lootg2acom.blob.core.windows.net/assets/custom/2.png"
+          alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">{{ charaEarn.name }}</h5>
-          <p class="card-text">{{ charaEarn.skills }}</p>
+          <h5 class="card-title">Character Case</h5>
+          <button (click)="getRandCar()" class="btn btn-primary btn-lg">Loot a mystery Character</button>
+          <div *ngIf="character">
+            <img [src]="character.image" style="height: 465px;">
+            <h1>{{ character.name }}</h1>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<h2>Exchange your credits to eat chocolate !</h2>
-<div class="row rowBuy">
-  <div class="card col-4">
-    <img class="card-img-top"
-      src="https://www.wondercity.com/uploads/publication/carousel/6d1f441545b4380862fa995bb0d76529db6dc751-3df10.jpg"
-      alt="Card image cap">
-    <button (click)="getChocolatePrice1()" class="btn btn-primary buttonBuy btn-lg">CHECK PRICE OF CHOCOLATES</button>
-    <div *ngIf="chocolateStock">
-      <h2>{{ chocolateStock[0].price }}£ for {{ chocolateStock[0].amount }} {{ chocolateStock[0].unit }}</h2>
+  <h2>Check your collection of Eggs</h2>
+  <div class="row">
+    <div class="card">
+      <div class="row black">
+        <div *ngFor="let eggEarn of collection" class="card" style="width: 18rem;">
+          <img class="card-img-top black" [src]="eggEarn.image" alt="Card image cap">
+          <div class="card-body black">
+            <h5 class="card-title black">{{ eggEarn.name }}</h5>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="card col-4">
-    <img class="card-img-top"
-      src="http://www.canalvie.com/polopoly_fs/1.3665535.1520353788!/image/decorations-paques.jpg_gen/derivatives/cvlandscape_670_377/decorations-paques.jpg"
-      alt="Card image cap">
-    <h2> With your {{count}} credits, you can buy {{kgChocolate}} KG of chocolate !</h2>
+
+  <h2>Check your collection of Characters</h2>
+  <div class="row">
+    <div class="card">
+      <div class="row black">
+        <div *ngFor="let charaEarn of characterCollection" class="card" style="width: 18rem;">
+          <img class="card-img-top" [src]="charaEarn.image" alt="Card image cap">
+          <div class="card-body black">
+            <h5 class="card-title black">{{ charaEarn.name }}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="card col-4">
-    <img class="card-img-top"
-      src="https://static.lexpress.fr/medias_11792/w_1533,h_1150,c_crop,x_270,y_215/w_605,h_350,c_fill,g_north/v1522403106/oeufs-de-paques-peints_6037568.jpg"
-      alt="Card image cap">
-    <button class="btn btn-primary buttonBuy btn-lg">BUY NOW YOUR CHOCOLATE</button>
+
+  <h2>Exchange your credits to eat chocolate !</h2>
+  <div class="row rowBuy black">
+    <div class="card col-4 black">
+      <img class="card-img-top"
+        src="https://www.wondercity.com/uploads/publication/carousel/6d1f441545b4380862fa995bb0d76529db6dc751-3df10.jpg"
+        alt="Card image cap">
+      <button (click)="getChocolatePrice1()" class="btn btn-primary buttonBuy btn-lg">CHECK PRICE OF CHOCOLATES</button>
+      <div *ngIf="chocolateStock">
+        <h2>{{ chocolateStock[0].price }}£ for {{ chocolateStock[0].amount }} {{ chocolateStock[0].unit }}</h2>
+      </div>
+    </div>
+    <div class="card col-4 black">
+      <img class="card-img-top"
+        src="http://www.canalvie.com/polopoly_fs/1.3665535.1520353788!/image/decorations-paques.jpg_gen/derivatives/cvlandscape_670_377/decorations-paques.jpg"
+        alt="Card image cap">
+      <h2> With your {{count}} credits, you can buy {{kgChocolate}} KG of chocolate !</h2>
+    </div>
+    <div class="card col-4 black">
+      <img class="card-img-top"
+        src="https://static.lexpress.fr/medias_11792/w_1533,h_1150,c_crop,x_270,y_215/w_605,h_350,c_fill,g_north/v1522403106/oeufs-de-paques-peints_6037568.jpg"
+        alt="Card image cap">
+      <button class="btn btn-primary buttonBuy btn-lg">BUY NOW YOUR CHOCOLATE</button>
+    </div>
   </div>
 </div>

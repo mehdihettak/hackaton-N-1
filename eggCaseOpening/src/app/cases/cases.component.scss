@@ -17,11 +17,15 @@
 h2 {
     text-align: center;
     padding: 32px;
+    color: white;
+
 }
 
 h5 {
     text-align: center;
     padding: 32px;
+    color: white;
+
 }
 
 button {
@@ -43,6 +47,8 @@ button {
 h1 {
     text-align: center;
     padding: 29px;
+    color: white;
+
 }
 
 .zoom {
@@ -53,4 +59,19 @@ h1 {
   
   .zoom:hover {
     transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+  .background {
+      background-image: url('https://image.noelshack.com/fichiers/2019/16/5/1555670892-spyrobckg.jpg');
+      background-size: cover;
+  }
+
+  .whiteColor {
+    color: white;
+  }
+
+
+
+  .black {
+    background-color: grey;
   }
