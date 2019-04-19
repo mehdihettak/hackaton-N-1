@@ -1,15 +1,17 @@
+<h1>You have {{ count }} credits</h1>
+
 <div class="row" id='case'>
   <div class="col-6 cases">
-    <div class="card" style="width: 30rem;">
+    <div class="card caseH" style="width: 40rem;">
       <h2>Loot some special eggs and complete your collection !</h2>
       <img class="card-img-top" src="https://lootg2acom.blob.core.windows.net/assets/custom/48.png"
         alt="Card image cap">
       <div class="card-body">
-        <h5 class="card-title">Basic Case</h5>
+        <h5 class="card-title">Egg Case</h5>
         <p class="card-text">Egg rarity : junk, basic, fine</p>
-        <button (click)="getRandEgg()" class="btn btn-primary">Loot</button>
+        <button (click)="getRandEgg()" class="btn btn-primary btn-lg">Loot a mystery Egg</button>
         <div *ngIf="egg">
-          <img [src]="egg.image" style="height: 244px;">
+          <img [src]="egg.image" style="height: 465px;">
           <p>{{ egg.name }}</p>
           <p>{{ egg.rarity }}</p>
           <p>{{ egg.power }}</p>
@@ -18,16 +20,16 @@
     </div>
   </div>
   <div class="col-6 cases">
-    <div class="card" style="width: 30rem;">
+    <div class="card caseH" style="width: 40rem;">
       <h2>Loot some special characters and complete your collection !</h2>
       <img class="card-img-top" src="https://lootg2acom.blob.core.windows.net/assets/custom/48.png"
         alt="Card image cap">
       <div class="card-body">
-        <h5 class="card-title">Basic Case</h5>
+        <h5 class="card-title">Character Case</h5>
         <p class="card-text">Egg rarity : junk, basic, fine</p>
-        <button (click)="getRandCar()" class="btn btn-primary">Loot</button>
+        <button (click)="getRandCar()" class="btn btn-primary btn-lg">Loot a mystery Character</button>
         <div *ngIf="character">
-          <img [src]="character.image" style="height: 244px;">
+          <img [src]="character.image" style="height: 465px;">
           <p>{{ character.name }}</p>
           <p>{{ character.skills }}</p>
         </div>
@@ -37,7 +39,6 @@
 </div>
 
 <h2>Check your collection of Eggs</h2>
-<h5>You have {{ count }} credits</h5>
 <div class="row">
   <div class="card">
     <div class="row">
@@ -53,7 +54,6 @@
 </div>
 
 <h2>Check your collection of Characters</h2>
-<h5>You have {{ count }} credits</h5>
 <div class="row">
   <div class="card">
     <div class="row">
@@ -68,12 +68,13 @@
   </div>
 </div>
 
-<div class="row">
+<h2>Exchange your credits to eat chocolate !</h2>
+<div class="row rowBuy">
   <div class="card col-4">
     <img class="card-img-top"
       src="https://www.wondercity.com/uploads/publication/carousel/6d1f441545b4380862fa995bb0d76529db6dc751-3df10.jpg"
       alt="Card image cap">
-    <button (click)="getChocolatePrice1()" class="btn btn-primary">CHECK PRICE OF CHOCOLATES</button>
+    <button (click)="getChocolatePrice1()" class="btn btn-primary buttonBuy btn-lg">CHECK PRICE OF CHOCOLATES</button>
     <div *ngIf="chocolateStock">
       <h5>{{ chocolateStock[0].price }}£ for {{ chocolateStock[0].amount }} {{ chocolateStock[0].unit }}</h5>
     </div>
@@ -88,6 +89,6 @@
     <img class="card-img-top"
       src="https://static.lexpress.fr/medias_11792/w_1533,h_1150,c_crop,x_270,y_215/w_605,h_350,c_fill,g_north/v1522403106/oeufs-de-paques-peints_6037568.jpg"
       alt="Card image cap">
-    <button class="btn btn-primary">BUY NOW YOUR CHOCOLATE</button>
+    <button class="btn btn-primary buttonBuy btn-lg">BUY NOW YOUR CHOCOLATE</button>
   </div>
 </div>

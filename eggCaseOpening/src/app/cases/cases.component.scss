@@ -6,4 +6,39 @@
 .cases {
     display:flex;
     justify-content: space-around;
+    padding: 23px;
+}
+
+.caseH {
+    margin: 36px;
+    padding: 16px;
+}
+
+h2 {
+    text-align: center
+}
+
+h5 {
+    text-align: center
+}
+
+button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FFD700;
+    color: black
+}
+
+.buttonBuy {
+    margin: 10px;
+}
+
+.rowBuy {
+    margin: 50px;
+}
+
+h1 {
+    text-align: center;
+    padding: 29px;
 }

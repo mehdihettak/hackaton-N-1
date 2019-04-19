@@ -47,10 +47,6 @@ export class CasesComponent implements OnInit {
     });  
   }
 
-  addCredits(){
-    this.count1 += 5
-  }
-
   getChocolatePrice1(){
     this.apiService.getChocolatePrice().subscribe(dataRC => {
       this.chocolateStock = dataRC}
@@ -73,7 +69,6 @@ export class CasesComponent implements OnInit {
     this.apiService.getRandomCaracter().subscribe(dataRE => {
       this.character = dataRE
       this.characterCollection.push(this.character)
-      this.count = this.characterCollection.length
       console.log(this.characterCollection)
     });  
   }
