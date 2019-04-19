@@ -1,0 +1,21 @@
+body {
+    background-color: dimgrey;
+  }
+
+
+
+/* CasesItems */
+
+#ItemsContainer{
+    position: relative;
+}
+
+#CharacterCasesContainer{
+    position: relative;
+}
+
+#CasesItems {
+        display: flex;
+        justify-content: space-around;
+      }
+      

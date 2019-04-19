@@ -1,0 +1,39 @@
+<h2>Loot some special eggs and complete your collection !</h2>
+<div class="row" id='case'>
+  <div class="col">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="https://lootg2acom.blob.core.windows.net/assets/custom/1.png"
+        alt="Card image cap" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Basic Case</h5>
+        <p class="card-text">Character rarity : junk, basic, fine</p>
+        <button (click)="getRandCar()" class="btn btn-primary">Loot</button>
+        <div *ngIf="egg">
+          <img [src]="caracter.image">
+          <p>{{ caracter.name }}</p>
+          <p>{{ caracter.gender }}</p>
+          <p>{{ caracter.skills }}</p>
+        </div>
+      </div>
+      <div class="card-footer">
+        <small>Price : 2$ </small>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>Check your collection</h2>
+<div>
+    <div class="row">
+        <div *ngFor="let characterEarn of characterCollection" class="card col-2" style="width: 18rem;">
+          <img class="card-img-top" [src]="characterEarn.image" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{ characterEarn.name }}</h5>
+            <p class="card-text">{{ characterEarn.skills }}</p>
+          </div>
+        </div>
+      </div>
+</div>
+
+<h2>Your credits</h2>
+<p>{{ count }}</p>

@@ -8,6 +8,7 @@ import { CaractersComponent } from './caracters/caracters.component';
 import {HttpClientModule} from  '@angular/common/http';
 import { APIService } from './api.service';
 import { EggsComponent } from './eggs/eggs.component';
+import { CasescharactersComponent } from './casescharacters/casescharacters.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { EggsComponent } from './eggs/eggs.component';
     AppComponent,
     CasesComponent,
     CaractersComponent,
-    EggsComponent
+    EggsComponent,
+    CasescharactersComponent,
   ],
   imports: [
     BrowserModule,

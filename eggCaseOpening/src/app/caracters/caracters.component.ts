@@ -14,13 +14,13 @@ export class CaractersComponent implements OnInit {
   constructor(private apiService: APIService) { }
 
   ngOnInit() {
-    this.apiService.getCaracter().subscribe(data => this.caracters = data);
+    
   }
 
   getRandCar(){
-    this.apiService.getRandomCaracter().subscribe(dataRC => {
-      this.caracters = [dataRC]}
-      );
+    this.apiService.getRandomCaracter().subscribe(dataRE => this.caracters = dataRE => this.character.push(this.caracters));
+    console.log(this.character)
   }
 
 }
+
