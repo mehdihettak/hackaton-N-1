@@ -8,7 +8,7 @@
         <h5 class="card-title">Basic Case</h5>
         <p class="card-text">Egg rarity : junk, basic, fine</p>
         <button (click)="getRandEgg()" class="btn btn-primary">Loot</button>
-        <div *ngIf="egg">
+        <div *ngIf="egg" style="height:244px" class="ModalEgg">
           <img [src]="egg.image">
           <p>{{ egg.name }}</p>
           <p>{{ egg.rarity }}</p>
@@ -25,7 +25,7 @@
 <h2>Check your collection</h2>
 <div>
     <div class="row">
-        <div *ngFor="let eggEarn of collection" class="card col-2" style="width: 18rem;">
+        <div *ngFor="let eggEarn of collection" class="card col-2" style="width: 15rem;">
           <img class="card-img-top" [src]="eggEarn.image" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">{{ eggEarn.name }}</h5>
