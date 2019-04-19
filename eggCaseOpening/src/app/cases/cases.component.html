@@ -80,7 +80,7 @@
   <div class="col-6 cases">
     <div class="card caseH" style="width: 40rem;">
       <h2>Loot some special characters and complete your collection !</h2>
-      <img class="card-img-top" src="https://lootg2acom.blob.core.windows.net/assets/custom/2.png"
+      <img class="card-img-top zoom" src="https://lootg2acom.blob.core.windows.net/assets/custom/2.png"
         alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">Character Case</h5>
@@ -134,14 +134,14 @@
       alt="Card image cap">
     <button (click)="getChocolatePrice1()" class="btn btn-primary buttonBuy btn-lg">CHECK PRICE OF CHOCOLATES</button>
     <div *ngIf="chocolateStock">
-      <h5>{{ chocolateStock[0].price }}£ for {{ chocolateStock[0].amount }} {{ chocolateStock[0].unit }}</h5>
+      <h2>{{ chocolateStock[0].price }}£ for {{ chocolateStock[0].amount }} {{ chocolateStock[0].unit }}</h2>
     </div>
   </div>
   <div class="card col-4">
     <img class="card-img-top"
       src="http://www.canalvie.com/polopoly_fs/1.3665535.1520353788!/image/decorations-paques.jpg_gen/derivatives/cvlandscape_670_377/decorations-paques.jpg"
       alt="Card image cap">
-    <h5> With your {{count}} credits, you can buy {{kgChocolate}} KG of chocolate !</h5>
+    <h2> With your {{count}} credits, you can buy {{kgChocolate}} KG of chocolate !</h2>
   </div>
   <div class="card col-4">
     <img class="card-img-top"
