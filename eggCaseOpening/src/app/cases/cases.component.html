@@ -15,26 +15,45 @@
           <p>{{ egg.power }}</p>
         </div>
       </div>
-      <div class="card-footer">
-        <small>Price : 1$ </small>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Check your collection of Eggs</h2>
+  <h5>You have {{ count }} credits</h5>
+  <div class="row">
+    <div *ngFor="let eggEarn of collection" class="card col-2" style="width: 18rem;">
+      <img class="card-img-top" [src]="eggEarn.image" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{ eggEarn.name }}</h5>
+        <p class="card-text">{{ eggEarn.skills }}</p>
       </div>
     </div>
   </div>
 </div>
 
-<h2>Check your collection</h2>
-<div>
-    <div class="row">
-        <div *ngFor="let eggEarn of collection" class="card col-2" style="width: 18rem;">
-          <img class="card-img-top" [src]="eggEarn.image" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">{{ eggEarn.name }}</h5>
-            <p class="card-text">{{ eggEarn.skills }}</p>
-          </div>
-        </div>
-      </div>
+
+<div class="row">
+  <div class="card col-4">
+    <img class="card-img-top"
+      src="https://www.wondercity.com/uploads/publication/carousel/6d1f441545b4380862fa995bb0d76529db6dc751-3df10.jpg"
+      alt="Card image cap">
+    <button (click)="getChocolatePrice1()" class="btn btn-primary">CHECK PRICE OF CHOCOLATES</button>
+    <div *ngIf="chocolateStock">
+      <h5>{{ chocolateStock[0].price }}£ for {{ chocolateStock[0].amount }} {{ chocolateStock[0].unit }}</h5>
+    </div>
+  </div>
+  <div class="card col-4">
+    <img class="card-img-top"
+      src="http://www.canalvie.com/polopoly_fs/1.3665535.1520353788!/image/decorations-paques.jpg_gen/derivatives/cvlandscape_670_377/decorations-paques.jpg"
+      alt="Card image cap">
+    <h5> With your {{count}} credits, you can buy {{kgChocolate}} KG of chocolate !</h5>
+  </div>
+  <div class="card col-4">
+    <img class="card-img-top"
+      src="https://static.lexpress.fr/medias_11792/w_1533,h_1150,c_crop,x_270,y_215/w_605,h_350,c_fill,g_north/v1522403106/oeufs-de-paques-peints_6037568.jpg"
+      alt="Card image cap">
+    <button class="btn btn-primary">BUY NOW YOUR CHOCOLATE</button>
+  </div>
 </div>
-
-<h2>Your credits</h2>
-<p>{{ count }}</p>
-

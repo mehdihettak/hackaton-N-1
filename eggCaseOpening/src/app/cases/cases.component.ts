@@ -22,6 +22,13 @@ export class CasesComponent implements OnInit {
 
   egg: any = undefined
 
+  chocolateStock : any = undefined
+
+  eggStock : any = undefined
+
+  milkStock : any = undefined
+
+
   constructor(private apiService: APIService) { }
 
   ngOnInit() {
@@ -31,7 +38,7 @@ export class CasesComponent implements OnInit {
     this.apiService.getRandomEgg().subscribe(dataRE => {
       this.egg = dataRE
       this.collection.push(this.egg)
-      this.count = this.collection.length
+      this.count = this.collection.length * 5
       console.log(this.collection)
     });  
   }
@@ -39,5 +46,25 @@ export class CasesComponent implements OnInit {
   addCredits(){
     this.count1 += 5
   }
+
+  getChocolatePrice1(){
+    this.apiService.getChocolatePrice().subscribe(dataRC => {
+      this.chocolateStock = dataRC}
+      );
+  }
+
+  getMilkPrice1(){
+    this.apiService.getMilkPrice().subscribe(dataRC => {
+      this.chocolateStock = dataRC}
+      );
+  }
+
+  getEggPrice1(){
+    this.apiService.getEggPrice().subscribe(dataRC => {
+      this.chocolateStock = dataRC}
+      );
+  }
+
+
 
 }
