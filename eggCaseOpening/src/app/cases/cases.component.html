@@ -1,7 +1,7 @@
-<h2>Loot some special eggs and complete your collection !</h2>
 <div class="row" id='case'>
-  <div class="col">
+  <div class="col-6">
     <div class="card">
+      <h2>Loot some special eggs and complete your collection !</h2>
       <img class="card-img-top" src="https://lootg2acom.blob.core.windows.net/assets/custom/48.png"
         alt="Card image cap">
       <div class="card-body">
@@ -17,6 +17,24 @@
       </div>
     </div>
   </div>
+  <div class="col-6">
+      <div class="card">
+        <h2>Loot some special eggs and complete your collection !</h2>
+        <img class="card-img-top" src="https://lootg2acom.blob.core.windows.net/assets/custom/48.png"
+          alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Basic Case</h5>
+          <p class="card-text">Egg rarity : junk, basic, fine</p>
+          <button (click)="getRandEgg()" class="btn btn-primary">Loot</button>
+          <div *ngIf="egg">
+            <img [src]="egg.image">
+            <p>{{ egg.name }}</p>
+            <p>{{ egg.rarity }}</p>
+            <p>{{ egg.power }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
 </div>
 
 <div class="card">
